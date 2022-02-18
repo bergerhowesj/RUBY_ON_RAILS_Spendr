@@ -1,13 +1,36 @@
 
 <h3 class="banner"><%= store.name %></h3>
-<p class="info"><%= store.unit_or_building %><br/>
-<%= store.street_number %> <%= store.street_name %><br/>
-<%= store.suburb %><br/>
-<%= store.postcode %><br/>
-<%= store.city %></p>
-<p class="info"><span class="underline">Receipts from this store</span></p>
-<% store.receipts.each do |receipt| %>
-    <div class="info">
-        <%= link_to "#{receipt.id} #{receipt.date.strftime("%B %d, %Y")} #{receipt.time.strftime('%H:%M')}", receipt_path(receipt.id), class: "links_to_ind" %>
-    </div>
-<%end%>
+<table>
+    <tr>
+        <th>Unit/Building</th>
+        <th>Street Address</th>
+        <th>Suburb</th>
+        <th>Postcode</th>
+        <th>City</th>
+    </tr>
+    <tr>
+    <td><%= store.unit_or_building %></td>
+    <td><%= store.street_number %> <%= store.street_name %></td>
+    <td><%= store.suburb %></td>
+    <td><%= store.postcode %></td>
+    <td><%= store.city %></td>
+    </tr>
+    <tr>
+    <th colspan=5>Receipts from this store</th>
+    <% store.receipts.each do |receipt| %>
+        <tr>
+            <th></th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>No. of items</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><%= link_to receipt.id, receipt_path(receipt.id), class: "links_to_ind" %></td>
+            <td><%= link_to receipt.date.strftime("%B %d, %Y"), receipt_path(receipt.id), class: "links_to_ind" %></td>
+            <td><%= link_to receipt.time.strftime('%H:%M'), receipt_path(receipt.id), class: "links_to_ind" %></td>
+            <td><%= receipt.items.all.size %></td>
+            <td></td>
+        </tr>
+    <%end%>
+</table>

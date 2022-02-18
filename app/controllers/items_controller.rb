@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
         if @item.save
             redirect_back(fallback_location: root_path)
         else
-            render :new, notice: "Please fill in all fields"
+            redirect_back(fallback_location: root_path)
         end
     end
 

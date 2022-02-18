@@ -40,8 +40,25 @@ body{
     clear: both;
 }
 
-.inner_container{
+.form_inner_container{
     width: 50%;
+    height: 70%;
+    background-color: rgba(46, 156, 252, 0.8);
+    color:rgba(235, 224, 75, 0.95);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+    box-sizing: content-box;
+    overflow: scroll;
+    clear: both;
+}
+
+.inner_container{
+    width: 80%;
     height: 70%;
     background-color: rgba(46, 156, 252, 0.8);
     color:rgba(235, 224, 75, 0.95);

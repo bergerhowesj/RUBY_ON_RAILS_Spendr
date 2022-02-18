@@ -3,39 +3,41 @@
     <%= link_to "Add a store", new_store_path, class: "links"%>
 </div>
 <div class="container">
-    <div class="body">
-        <h3 class="banner">Stores</h3>
-        <% if @stores.size == 0 %>
-            <p class="info">There are no stores currently listed</p>
-        <% elsif @stores.size > 0 %>
-        <table>
-            <tr>
-                <th></th>
-                <th>Store Name</th>
-                <th>Suburb</th>
-                <th>Address</th>
-            </tr>
-            
-            <% @stores.each do |store| %>
+    <div class="inner_container">
+        <div class="body">
+            <h3 class="banner">Stores</h3>
+            <% if @stores.size == 0 %>
+                <p class="info">There are no stores currently listed</p>
+            <% elsif @stores.size > 0 %>
+            <table>
                 <tr>
-                    <td>
-                        <%=store.id%>
-                    </td>
-                    <td>
-                        <%= link_to store.name, store_path(store), class: "links_to_ind"%>
-                    </td>
-                    <td>
-                        <%=store.suburb%>
-                    </td>
-                    <td>
-                        <%=store.unit_or_building%><br/>
-                        <%=store.street_number%> <%=store.street_name%><br/>
-                        <%=store.city%> <%=store.postcode%>
-                    </td>
+                    <th></th>
+                    <th>Store</th>
+                    <th>Suburb</th>
+                    <th>Address</th>
                 </tr>
+                
+                <% @stores.each do |store| %>
+                    <tr>
+                        <td>
+                            <%=store.id%>
+                        </td>
+                        <td>
+                            <%= link_to store.name, store_path(store), class: "links_to_ind"%>
+                        </td>
+                        <td>
+                            <%=store.suburb%>
+                        </td>
+                        <td>
+                            <%=store.unit_or_building%><br/>
+                            <%=store.street_number%> <%=store.street_name%><br/>
+                            <%=store.city%> <%=store.postcode%>
+                        </td>
+                    </tr>
+                <% end %>
+            </table>
             <% end %>
-        </table>
-        <% end %>
+        </div>
     </div>
 </div>
 

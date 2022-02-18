@@ -2,5 +2,7 @@
     <%=link_to 'Back', 'javascript:history.back()', class: "links"%>
 </div>
 <div class="container">
-    <%= render partial: "stores/store", locals: {store: @store} %>
+    <div class="inner_container">
+        <%= render partial: "stores/store", locals: {store: @store} %>
+    </div>
 </div>

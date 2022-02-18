@@ -23,7 +23,7 @@
                             <tr>
                                 <td><%= link_to receipt.id, receipt_path(receipt.id), class:"links_to_ind" %></td>
                                 <td><%= link_to receipt.name, receipt_path(receipt.id), class:"links_to_ind" %></td>
-                                <td><%= link_to receipt.store_name, receipt_path(receipt.id), class:"links_to_ind" %></td>
+                                <td><%= link_to "#{receipt.store.name}, #{receipt.store.suburb}", store_path(receipt.store.id), class:"links_to_ind" %></td>
                                 <td><%= link_to receipt.date.strftime("%B %d, %Y"), receipt_path(receipt.id), class:"links_to_ind" %></td>
                                 <td><%= link_to receipt.time.strftime('%H:%M'), receipt_path(receipt.id), class:"links_to_ind" %></td>
                                 <td><%= render partial: "categories/category", collection: receipt.categories.all, as: :category %></td>
