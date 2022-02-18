@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2022_02_04_105719) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name", "unit_or_building", "street_number", "street_name", "suburb", "postcode", "city"], name: "idx_store_address", unique: true
     t.index ["user_id"], name: "index_stores_on_user_id"
   end
 
@@ -81,15 +82,8 @@ ActiveRecord::Schema.define(version: 2022_02_04_105719) do
     t.string "username"
     t.string "first_name"
     t.string "last_name"
-    t.string "contact_number"
-    t.string "address_unit_number"
-    t.string "address_street_number"
-    t.string "address_street_name"
-    t.string "address_suburb"
-    t.string "address_city"
     t.string "address_state"
     t.integer "address_postcode"
-    t.string "address_country"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false

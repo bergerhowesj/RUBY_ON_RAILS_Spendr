@@ -8,11 +8,33 @@
         <% if @stores.size == 0 %>
             <p class="info">There are no stores currently listed</p>
         <% elsif @stores.size > 0 %>
+        <table>
+            <tr>
+                <th></th>
+                <th>Store Name</th>
+                <th>Suburb</th>
+                <th>Address</th>
+            </tr>
+            
             <% @stores.each do |store| %>
-            <div>
-                <%= link_to "#{store.name} - #{store.suburb}", store_path(store), class: "links_to_ind"%>
-            </div>
+                <tr>
+                    <td>
+                        <%=store.id%>
+                    </td>
+                    <td>
+                        <%= link_to store.name, store_path(store), class: "links_to_ind"%>
+                    </td>
+                    <td>
+                        <%=store.suburb%>
+                    </td>
+                    <td>
+                        <%=store.unit_or_building%><br/>
+                        <%=store.street_number%> <%=store.street_name%><br/>
+                        <%=store.city%> <%=store.postcode%>
+                    </td>
+                </tr>
             <% end %>
+        </table>
         <% end %>
     </div>
 </div>

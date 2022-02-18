@@ -20,9 +20,9 @@ class StoresController < ApplicationController
         @user ||= current_user
         @store = @user.stores.new(store_params)
         if @store.save
-            redirect_to stores_path
+            redirect_to stores_path, notice: "Store created"
         else
-            render :new
+            redirect_to new_store_path, notice: "Stores must be unique, Please try again"
         end
     end
 

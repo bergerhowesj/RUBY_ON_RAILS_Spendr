@@ -12,5 +12,7 @@ class CreateStores < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+
+    add_index :stores, [:name, :unit_or_building, :street_number, :street_name, :suburb, :postcode, :city, :user_id], unique: true, name: "idx_store_address"
   end
 end

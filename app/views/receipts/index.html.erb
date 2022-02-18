@@ -4,7 +4,7 @@
     <div class="body">
         <h3 class="banner" >Hey <%= @user.first_name %>,</h3>
         <% if @receipts.length == 0 %>
-            <p class="info">Please begin by adding a receipt</p>
+            <h4 class="info">Please begin by adding a receipt<h4>
         <% elsif @receipts.length > 0 %>
             <h4 class="info">Here are your receipts:</h4>
             <table>
@@ -17,16 +17,17 @@
                     <th>Categories</th>
                     <th>Notes</th>
                 </tr>
-                <tr>
+                
                     <% @receipts.each do |receipt| %>
-                        <td><%= link_to receipt.id, receipt_path(receipt.id), class:"links_to_ind" %></td>
-                        <td><%= link_to receipt.name, receipt_path(receipt.id), class:"links_to_ind" %></td>
-                        <td><%= link_to receipt.store_name, receipt_path(receipt.id), class:"links_to_ind" %></td>
-                        <td><%= link_to receipt.date.strftime("%B %d, %Y"), receipt_path(receipt.id), class:"links_to_ind" %></td>
-                        <td><%= link_to receipt.time.strftime('%H:%M'), receipt_path(receipt.id), class:"links_to_ind" %></td>
-                        <td><%= render partial: "categories/category", collection: receipt.categories.all, as: :category %></td>
-                        <td><%= render partial: "notes/note", collection: receipt.notes.all, as: :note %></td>
-                        </div>
+                        <tr>
+                            <td><%= link_to receipt.id, receipt_path(receipt.id), class:"links_to_ind" %></td>
+                            <td><%= link_to receipt.name, receipt_path(receipt.id), class:"links_to_ind" %></td>
+                            <td><%= link_to receipt.store_name, receipt_path(receipt.id), class:"links_to_ind" %></td>
+                            <td><%= link_to receipt.date.strftime("%B %d, %Y"), receipt_path(receipt.id), class:"links_to_ind" %></td>
+                            <td><%= link_to receipt.time.strftime('%H:%M'), receipt_path(receipt.id), class:"links_to_ind" %></td>
+                            <td><%= render partial: "categories/category", collection: receipt.categories.all, as: :category %></td>
+                            <td><%= render partial: "notes/note", collection: receipt.notes.all, as: :note %></td>
+                        </tr>
                     <% end %>
             </table>
         <%end%>
