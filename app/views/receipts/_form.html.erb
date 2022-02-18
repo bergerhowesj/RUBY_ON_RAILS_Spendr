@@ -7,9 +7,8 @@
   <%= f.label :time, class: "label time_label"%>
   <%= f.time_field :time, class: "input time"%><br/>
   <%= f.label :store, class: "label store_label"%>
-  <%= f.collection_select :store_id, @user.stores.all, :id, :name, {include_blank: "Select a store..."}, {class: "input"}%><br>
+  <%= f.collection_select :store_id, @user.stores.all, :id, :name_and_suburb, {include_blank: "Select a store..."}, {class: "input"}%><br>
   <p class="extra_info"> If the store you require is not present in the dropdown list, you can add a new store <%= link_to "here", new_store_path, class: "extra_info_link" %>.</p>
-  
 
   <%= f.submit class: "submit" %>
 <% end %>

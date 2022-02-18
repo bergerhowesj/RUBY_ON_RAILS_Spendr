@@ -1,35 +1,37 @@
 
 
 <div class="container">
-    <div class="body">
-        <h3 class="banner" >Hey <%= @user.first_name %>,</h3>
-        <% if @receipts.length == 0 %>
-            <h4 class="info">Please begin by adding a receipt<h4>
-        <% elsif @receipts.length > 0 %>
-            <h4 class="info">Here are your receipts:</h4>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Receipt name</th>
-                    <th>Store name</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Categories</th>
-                    <th>Notes</th>
-                </tr>
-                
-                    <% @receipts.each do |receipt| %>
-                        <tr>
-                            <td><%= link_to receipt.id, receipt_path(receipt.id), class:"links_to_ind" %></td>
-                            <td><%= link_to receipt.name, receipt_path(receipt.id), class:"links_to_ind" %></td>
-                            <td><%= link_to receipt.store_name, receipt_path(receipt.id), class:"links_to_ind" %></td>
-                            <td><%= link_to receipt.date.strftime("%B %d, %Y"), receipt_path(receipt.id), class:"links_to_ind" %></td>
-                            <td><%= link_to receipt.time.strftime('%H:%M'), receipt_path(receipt.id), class:"links_to_ind" %></td>
-                            <td><%= render partial: "categories/category", collection: receipt.categories.all, as: :category %></td>
-                            <td><%= render partial: "notes/note", collection: receipt.notes.all, as: :note %></td>
-                        </tr>
-                    <% end %>
-            </table>
-        <%end%>
+    <div class="inner_container">
+        <div class="body">
+            <h3 class="banner" >Hey <%= @user.first_name %>,</h3>
+            <% if @receipts.length == 0 %>
+                <h4 class="info">Please begin by adding a receipt<h4>
+            <% elsif @receipts.length > 0 %>
+                <h4 class="info">Here are your receipts:</h4>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Receipt name</th>
+                        <th>Store name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Categories</th>
+                        <th>Notes</th>
+                    </tr>
+                    
+                        <% @receipts.each do |receipt| %>
+                            <tr>
+                                <td><%= link_to receipt.id, receipt_path(receipt.id), class:"links_to_ind" %></td>
+                                <td><%= link_to receipt.name, receipt_path(receipt.id), class:"links_to_ind" %></td>
+                                <td><%= link_to receipt.store_name, receipt_path(receipt.id), class:"links_to_ind" %></td>
+                                <td><%= link_to receipt.date.strftime("%B %d, %Y"), receipt_path(receipt.id), class:"links_to_ind" %></td>
+                                <td><%= link_to receipt.time.strftime('%H:%M'), receipt_path(receipt.id), class:"links_to_ind" %></td>
+                                <td><%= render partial: "categories/category", collection: receipt.categories.all, as: :category %></td>
+                                <td><%= render partial: "notes/note", collection: receipt.notes.all, as: :note %></td>
+                            </tr>
+                        <% end %>
+                </table>
+            <%end%>
+        </div>
     </div>
 </div> 

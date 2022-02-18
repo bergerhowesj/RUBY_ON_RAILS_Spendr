@@ -7,4 +7,8 @@ class Store < ActiveRecord::Base
         error: "This store already exists"
     }
 
+    def name_and_suburb
+        "#{name}, #{suburb}"
+    end
+
 end

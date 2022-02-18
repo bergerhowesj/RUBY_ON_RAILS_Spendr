@@ -2,7 +2,9 @@
     <%= link_to "Back to receipts", receipts_path, class: "links" %>
 </div>
 <div class="container">
-    <h3 class="banner">Add a new receipt</h3>
+    <div class="inner_container">
+        <h3 class="banner">Add a new receipt</h3>
 
-    <%= render 'form', receipt: @receipt%>
+        <%= render 'form', receipt: @receipt%>
+    </div>
 </div>
