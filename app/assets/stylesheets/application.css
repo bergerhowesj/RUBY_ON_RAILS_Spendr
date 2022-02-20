@@ -73,6 +73,8 @@ body{
 .home_index_container{
     background-image: url('home_index_container.jpg');
     background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .user_new_container{
