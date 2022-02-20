@@ -27,7 +27,6 @@ body{
 .container{
     width: 75%;
     height: 70%;
-    background-color: rgba(46, 156, 252, 0.8);
     color:rgba(235, 224, 75, 0.95);
     position: relative;
     margin-left: auto;
@@ -40,10 +39,59 @@ body{
     clear: both;
 }
 
+.store_show_container{
+    background-image: url('store_show_container.jpg');
+    background-size: contain;
+}
+
+.store_new_container{
+    background-image: url('store_new_container.jpg');
+    background-size: contain;
+}
+
+.store_index_container{
+    background-image: url('store_index_container.jpg');
+    background-size: contain;
+    background-size: 100%;
+}
+
+.receipt_index_container{
+    background-image: url('receipt_index_container.jpg');
+    background-size: contain;
+}
+
+.receipt_show_container{
+    background-image: url('receipt_show_container.jpg');
+    background-size: contain;
+}
+
+.receipt_new_container{
+    background-image: url('receipt_new_container.jpg');
+    background-size: contain;
+}
+
+.home_index_container{
+    background-image: url('home_index_container.jpg');
+    background-size: contain;
+}
+
+.user_new_container{
+    background-image: url('user_new_container.jpg');
+    background-size: contain;
+}
+
+.session_new_container{
+    background-image: url('session_new_container.jpg');
+    background-size: contain;
+    background-size: 100%;
+}
+
+
+
 .form_inner_container{
     width: 50%;
     height: 70%;
-    background-color: rgba(46, 156, 252, 0.8);
+    background-color: rgba(46, 156, 252, 0.95);
     color:rgba(235, 224, 75, 0.95);
     position: relative;
     margin-left: auto;
@@ -60,8 +108,8 @@ body{
 .inner_container{
     width: 80%;
     height: 70%;
-    background-color: rgba(46, 156, 252, 0.8);
-    color:rgba(235, 224, 75, 0.95);
+    background-color: rgba(46, 156, 252, 0.95);
+    color:rgba(235, 224, 75, 1);
     position: relative;
     margin-left: auto;
     margin-right: auto;

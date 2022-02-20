@@ -1,7 +1,7 @@
 <div class="links_container">
     <%= link_to "Back to receipts", receipts_path, class: "links"%>
 </div>
-<div class="container">
+<div class="receipt_show_container container">
     <div class="inner_container">
         <h4 class="banner"><%=@receipt.name%></h4>
         <table>
@@ -40,13 +40,10 @@
                     <td colspan=5><%= render partial: "items/item", collection: @receipt.items, as: :item || 'There are no items' %></td>
                 </tr>
             <%end%>
-
             <tr>
                 <th colspan=5>Add an item</th>
             </tr>
-            <tr>
-                <td colspan=5><%= render partial: "items/form", locals: {item: @receipt.items.build} %></td>
-            </tr>
+            <%= render partial: "items/form", locals: {item: @receipt.items.build} %>
         </table>
     </div>
 </div>
