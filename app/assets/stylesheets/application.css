@@ -41,50 +41,65 @@ body{
 
 .store_show_container{
     background-image: url('store_show_container.jpg');
-    background-size: contain;
+    background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .store_new_container{
     background-image: url('store_new_container.jpg');
-    background-size: contain;
+    background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .store_index_container{
     background-image: url('store_index_container.jpg');
-    background-size: contain;
     background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    
 }
 
 .receipt_index_container{
     background-image: url('receipt_index_container.jpg');
-    background-size: contain;
+    background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .receipt_show_container{
     background-image: url('receipt_show_container.jpg');
-    background-size: contain;
+    background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .receipt_new_container{
     background-image: url('receipt_new_container.jpg');
-    background-size: contain;
+    background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .home_index_container{
     background-image: url('home_index_container.jpg');
-    background-size: contain;
+    background-size: 100%;
     background-position:center;
     background-repeat: no-repeat;
 }
 
 .user_new_container{
     background-image: url('user_new_container.jpg');
-    background-size: contain;
+    background-size: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .session_new_container{
     background-image: url('session_new_container.jpg');
-    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
