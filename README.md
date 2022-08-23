@@ -1,7 +1,7 @@
 #       Spendr
 
 
-Spendr is the website you didn't know you need. Spednr is the crumpled receipt in your wallet
+Spendr is the website that you didn't know you needed. Spendr is the crumpled receipt in your wallet
 eliminator. Spendr is the result of many years of frustration at tax time of trying to read faded, torn,
 wet receipts. Spendr is a website that you can digitally add, categorise and make notes on receipts. The
 end goal of Spendr? Total paper receipt domination!!
